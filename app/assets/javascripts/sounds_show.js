@@ -3,9 +3,8 @@ $(document).ready(function() {
 
   if (audio) {
     audio.onseeking = function() {
-      currentTime = audio.currentTime;
       var currentTimeElement = document.querySelector('.sounds-show .current-time')
-      currentTimeElement.innerHTML = Math.floor(currentTime*1000);
+      currentTimeElement.innerHTML = Math.floor(audio.currentTime*1000);
     };
   }
 });
