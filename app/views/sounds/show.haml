@@ -19,8 +19,8 @@
     %h2 Sections
     - @sound.sections.each do |section|
       .section-box{'data-start-time': section.start_time, 'data-end-time': section.end_time}
-        = section.name
-        = "#{section.start_time}ms - #{section.end_time}ms"
+        %span.name= section.name
+        %span.time-span= "(#{section.start_time}ms - #{section.end_time}ms)"
         %button Play
         = link_to 'Edit', edit_section_path(section)
 
