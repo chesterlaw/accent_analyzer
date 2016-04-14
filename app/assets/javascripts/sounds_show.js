@@ -29,5 +29,20 @@ $(document).ready(function() {
           }
         }
     });
+
+    // Visit new section's desired start_time.
+    $('.visit-here').on('click', function() {
+      var value = Number($(this).parents('.field').children('input')[0].value)/1000;
+      audio.currentTime = value;
+    });
+
+    // Play/Pause functionality in New Section form.
+    $('.play-pause').on('click', function() {
+      if (audio.paused === true) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
   }
 });
