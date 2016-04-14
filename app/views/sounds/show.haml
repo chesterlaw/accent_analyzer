@@ -1,18 +1,19 @@
 = notice
 
 .sounds-show
-  %h2
-    = @sound.name
-    %span= "(#{@sound.filename})"
+  .sound
+    %h2
+      = @sound.name
+      %span= "(#{@sound.filename})"
 
-  .links
-    = link_to 'Edit', edit_sound_path(@sound)
-    = link_to 'Back', sounds_path
+    .links
+      = link_to 'Edit', edit_sound_path(@sound)
+      = link_to 'Back', sounds_path
 
-  %audio{src: "/sounds/#{@sound.filename}", controls: ''}
-  %h3
-    %span Current Time (in milliseconds):
-    %span.current-time 0
+    %audio{src: "/sounds/#{@sound.filename}", controls: ''}
+    %h3
+      %span Current Time (ms):
+      %span.current-time 0
 
   .sections
     %h2 Sections

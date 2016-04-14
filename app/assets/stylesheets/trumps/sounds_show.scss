@@ -1,9 +1,30 @@
 .sounds-show {
+  padding: 1rem;
+
+  .sound {
+    padding: 2rem;
+    border-bottom: 1px solid black;
+
+    h2 {
+      display: inline-block;
+    }
+
+    .links {
+      display: inline-block;
+    }
+  }
+
+  .sections {
+    padding: 2rem;
+    border-bottom: 1px solid black;
+  }
+
   audio {
     width: 100%;
   }
 
   .new-section {
+    padding: 2rem;
     margin-top: 5rem;
   }
 }
