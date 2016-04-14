@@ -22,6 +22,8 @@
         = section.name
         = "#{section.start_time}ms - #{section.end_time}ms"
         %button Play
+        = link_to 'Edit', edit_section_path(section)
+
 
   .new-section
     %h2 New Section
