@@ -10,5 +10,7 @@
   <%= @sound.name %>
 </p>
 
+<audio src="/sounds/<%= @sound.filename %>" controls></audio>
+
 <%= link_to 'Edit', edit_sound_path(@sound) %> |
 <%= link_to 'Back', sounds_path %>
