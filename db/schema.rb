@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414134447) do
+ActiveRecord::Schema.define(version: 20160414142743) do
+
+  create_table "sections", force: :cascade do |t|
+    t.integer  "sound_id"
+    t.integer  "start_time"
+    t.integer  "end_time"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "sounds", force: :cascade do |t|
     t.string   "filename"

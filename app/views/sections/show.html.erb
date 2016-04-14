@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sound:</strong>
+  <%= @section.sound_id %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @section.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @section.end_time %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @section.name %>
+</p>
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>
