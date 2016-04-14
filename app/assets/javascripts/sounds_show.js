@@ -40,18 +40,20 @@ $(document).ready(function() {
   }
 
   function playFromHereToHere(startTime, endTime) {
-    // var src = document.querySelector('.sound audio').src;
-    // console.log(src);
+    var src = document.querySelector('.sound audio').src;
+    // Create new audio element instead of using main one,
+    // so that multiple audios can play at the same time.
+    var backgroundAudio = new Audio(src);
 
-    audio.currentTime = startTime;
-    audio.play()
+    backgroundAudio.currentTime = startTime;
+    backgroundAudio.play()
     checkIfSectionEnded();
 
     function checkIfSectionEnded() {
-      if (audio.currentTime <= endTime) {
+      if (backgroundAudio.currentTime <= endTime) {
         requestAnimationFrame(checkIfSectionEnded);
       } else {
-        audio.pause();
+        backgroundAudio.pause();
       }
     }
   }
