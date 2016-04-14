@@ -3,19 +3,24 @@
 .sounds-show
   %h2
     = @sound.name
+    %span= "(#{@sound.filename})"
 
-  %p
-    %strong Filename:
-    = @sound.filename
+  .links
+    = link_to 'Edit', edit_sound_path(@sound)
+    = link_to 'Back', sounds_path
 
   %audio{src: "/sounds/#{@sound.filename}", controls: ''}
   %h3
     %span Current Time (in milliseconds):
     %span.current-time 0
 
-  .links
-    = link_to 'Edit', edit_sound_path(@sound)
-    = link_to 'Back', sounds_path
+  .sections
+    %h2 Sections
+    - @sound.sections.each do |section|
+      .section-box
+        = section.name
+        = "#{section.start_time}ms - #{section.end_time}ms"
+        %button Play
 
   .new-section
     %h2 New Section
