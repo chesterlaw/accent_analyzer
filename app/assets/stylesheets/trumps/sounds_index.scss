@@ -1,5 +1,28 @@
+.sounds-index {
+  margin-top: 1rem;
+
+  h1 {
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .new-sound {
+    text-align: center;
+    display: block;
+    background: #ccc;
+    margin: 1rem auto;
+    width: 100px;
+  }
+}
+
 .sound-box {
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    display: inline-block;
+  }
   a {
-    background: #bbb;
+    display: inline-block;
   }
 }

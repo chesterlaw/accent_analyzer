@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Sounds</h1>
+<div class='sounds-index'>
+  <h1>Sounds</h1>
 
-<% @sounds.each do |sound| %>
-  <div class='sound-box'>
-   <%= link_to sound.name, sound %>
-   <%= link_to 'Edit', edit_sound_path(sound) %>
-   <%= link_to 'Destroy', sound, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </div>
-<% end %>
+  <% @sounds.each do |sound| %>
+    <div class='sound-box'>
+     <h2><%= link_to sound.name, sound %></h2>
+     <%= link_to 'Edit', edit_sound_path(sound) %>
+     <%= link_to 'Delete', sound, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% end %>
 
-<br>
-
-<%= link_to 'New Sound', new_sound_path %>
+  <%= link_to 'New Sound', new_sound_path, class: 'new-sound' %>
+</div>
