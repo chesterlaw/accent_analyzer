@@ -31,6 +31,14 @@ $(document).ready(function() {
         audio.pause();
       }
     });
+
+    $('.preview-section').on('click', function() {
+      var startTime = Number($(this).parents('form').find('#section_start_time')[0].value)/1000;
+      var endTime = Number($(this).parents('form').find('#section_end_time')[0].value)/1000;
+      playFromHereToHere(startTime, endTime);
+    });
+  }
+
   function playFromHereToHere(startTime, endTime) {
     // var src = document.querySelector('.sound audio').src;
     // console.log(src);
