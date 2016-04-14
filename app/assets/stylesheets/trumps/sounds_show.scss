@@ -12,6 +12,11 @@
     .links {
       display: inline-block;
     }
+
+    audio {
+      margin: 1rem 0;
+      width: 100%;
+    }
   }
 
   .sections {
@@ -19,12 +24,7 @@
     border-bottom: 1px solid black;
   }
 
-  audio {
-    width: 100%;
-  }
-
   .new-section {
     padding: 2rem;
-    margin-top: 5rem;
   }
 }
