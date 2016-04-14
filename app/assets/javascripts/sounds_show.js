@@ -38,6 +38,16 @@ $(document).ready(function() {
       var endTime = Number($(this).parents('form').find('#section_end_time')[0].value)/1000;
       playFromHereToHere(startTime, endTime);
     });
+
+    // Shortcut to play sections by pressing number keys.
+    $(document).keydown(function(e) {
+      if ($(e.target).closest("input")[0]) { return; } // Don't trigger on inputs
+      if (e.keyCode > 48 && e.keyCode < 58) {
+        var index = e.keyCode - 49
+        var targetSection = $('.section-box')[index];
+        $(targetSection).children('button').click();
+      }
+    });
   }
 
   function playFromHereToHere(startTime, endTime) {
