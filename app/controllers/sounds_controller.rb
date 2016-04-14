@@ -10,6 +10,7 @@ class SoundsController < ApplicationController
   # GET /sounds/1
   # GET /sounds/1.json
   def show
+    @section = Section.new
   end
 
   # GET /sounds/new

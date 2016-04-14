@@ -16,3 +16,22 @@
   .links
     = link_to 'Edit', edit_sound_path(@sound)
     = link_to 'Back', sounds_path
+
+  .new-section
+    %h2 New Section
+    = form_for(@section) do |f|
+      = f.hidden_field :sound_id, value: @sound.id
+
+      .field
+        = f.label :start_time
+        = f.number_field :start_time
+
+      .field
+        = f.label :end_time
+        = f.number_field :end_time
+
+      .field
+        = f.label :name
+        = f.text_field :name
+
+      = f.submit
