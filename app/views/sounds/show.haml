@@ -9,6 +9,9 @@
     = @sound.filename
 
   %audio{src: "/sounds/#{@sound.filename}", controls: ''}
+  %h3
+    %span Current Time (in milliseconds):
+    %span.current-time 0
 
   .links
     = link_to 'Edit', edit_sound_path(@sound)
