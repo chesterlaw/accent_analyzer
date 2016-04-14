@@ -1,0 +1,9 @@
+html { height: 100%; }
+
+*, input { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+body, .border-box, div, form, p, a, footer, input, textarea, label, img {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
