@@ -46,6 +46,15 @@ $(document).ready(function() {
         var index = e.keyCode - 49
         var targetSection = $('.section-box')[index];
         $(targetSection).children('button').click();
+      } else if (e.keyCode === 192) {
+        audio.currentTime = 0;
+        audio.play();
+      } else if (e.keyCode === 75) {
+        if (audio.paused === true) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
       }
     });
   }
