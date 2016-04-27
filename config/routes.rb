@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'sounds#index'
+
   resources :sections
   resources :sounds
   # The priority is based upon order of creation: first created -> highest priority.
