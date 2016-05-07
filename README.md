@@ -1,6 +1,6 @@
-# Accent Analyzer
+# Voice Analyzer
 
-This Rails app is used to analyze accents, by providing a way to define sub-sections of an audio file. This allows the user to more efficiently study the specific intonations of a word or phrase when spoken in a certain accent.
+This Rails app is used to analyze voices, by providing a way to define sub-sections of an audio file. This allows the user to more efficiently study the specific intonations of a word or phrase when spoken by a certain person, or in a certain accent.
 
 ## How to use
 
